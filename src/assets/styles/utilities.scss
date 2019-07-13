@@ -1,0 +1,51 @@
+
+.margin-bottom {
+    &-small {
+    margin-bottom: 1.5rem !important;
+  }
+    &-medium {
+    margin-bottom: 2.5rem !important;
+  }
+    &-large {
+    margin-bottom: 4rem !important;
+  }
+}
+
+.center {
+  &-vertical {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  &-horizontal {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
+
+
+
+.fa-border {
+    padding: .5rem !important;
+    border-radius: 50%;
+}
+
+.font-sans {
+  font-family : 'Open Sans', sans-serif !important;
+}
+
+.after {
+  position: relative;
+
+    &::after {
+    position: absolute;
+    top: 33px;
+    left: 0;
+    content: "";
+    width: 50px;
+    height: 5px;
+    background-color: #000;
+
+  }
+}
