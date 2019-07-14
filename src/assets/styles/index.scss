@@ -12,9 +12,6 @@
 // Raleway Font
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
-// Open Sans Font
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
 //Font-Awesome Icons
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/brands.min.css');
 
@@ -31,6 +28,15 @@ body {
   height: 95vh;
   background-size: auto;
   background-position: center center;
+  background-attachment: fixed;
+
+  @media only screen and (max-width: 1200px) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+
+  @media only screen and (max-width: 600px) {
+    clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
+  }
 
   &__subtitle {
     line-height: 2rem;
@@ -43,4 +49,33 @@ body {
 
 .about__column {
   border-bottom: 3px inset #dcdcdc;
+}
+
+.services {
+  background: #f5f5f5;
+
+  &__icon {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+}
+
+.parallax-bg {
+  background: linear-gradient(-45deg, rgba(88, 195, 255, 0.85) 0px, rgba(0, 77, 230, 0.85) 40%, rgba(0, 59, 177, 0.85) 100%), url('../images/parallax.svg');
+  height: 50vh;
+  background-size: auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.footer {
+  background: rgba(0, 77, 230, 0.85);
+
+  &__icons > *:not(:last-of-type) {
+    margin-right: 1.5rem;
+  }
 }
